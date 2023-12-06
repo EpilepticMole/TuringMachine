@@ -1,9 +1,9 @@
-public abstract class Comparison {
+public interface Comparison {
     public abstract int getLeftComparison(int[] sequence);
     public abstract int[] getRightComparison(int[] sequence);
 }
 
-class ColorComparison extends Comparison {
+class ColorComparison implements Comparison {
 
     private char[] colors;
 
@@ -56,7 +56,7 @@ class ColorComparison extends Comparison {
     }
 }
 
-class NumberComparison extends Comparison {
+class NumberComparison implements Comparison {
 
     protected int[] numbers;
 
