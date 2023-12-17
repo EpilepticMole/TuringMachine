@@ -123,12 +123,27 @@ class ConsecutiveFinder extends NumberComparison {
         super(null);
         if(growth < 0) {
             this.growth = -1;
-        } else {
+        } else if(growth > 0) {
             this.growth = 1;
+        } else {
+            this.growth = 0;
         }
     }
 
     public int getLeftComparison(int[] sequence) {
+        if(growth == 0) {
+            this.growth = -1;
+            int dec = countConsecutives(sequence);
+            this.growth = 1;
+            int gro = countConsecutives(sequence);
+            if(dec == 3 || gro == 3) {
+                return 3;
+            } else if(dec == 2 || gro == 2) {
+                return 2;
+            } else {
+                return 1;
+            }
+        }
         return countConsecutives(sequence);
     }
 
