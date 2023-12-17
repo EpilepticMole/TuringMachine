@@ -1,6 +1,6 @@
 public class Criterion {
 
-    private int[] cards;
+    public final int[] cards;
 
     private char op;
 
