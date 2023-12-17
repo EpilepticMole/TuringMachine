@@ -1,9 +1,15 @@
+import java.util.ArrayList;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        Criterion c = new Criterion(new int[]{1},'=', new GrowthComparison(), new NumberComparison(new  int[]{1}));
+        ArrayList<Problem> problems = new ArrayList<Problem>();
 
-        System.out.println(c.verify(new int[]{4,5,6}));
+        ProblemDataBase.fillProblems(problems);
+
+        for (Problem problem : problems) {
+            System.out.println(problem.verify('A', new int[]{3, 2, 1}));
+        }
     }
 }
