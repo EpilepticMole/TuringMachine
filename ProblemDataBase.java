@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * The ProblemDataBase class represents a database of problems.
+ * It provides a method to fill the database with different types of problems.
+ */
 public class ProblemDataBase {
     public static void fillProblems(ArrayList<Problem> problems) {
         /* 
