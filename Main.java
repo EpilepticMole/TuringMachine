@@ -11,5 +11,6 @@ public class Main {
         for (Problem problem : problems) {
             //System.out.println(problem.verify('A', new int[]{3, 2, 1}));
         }
+        System.out.println("Finished!");
     }
 }

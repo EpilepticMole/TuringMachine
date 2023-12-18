@@ -1,4 +1,4 @@
-public class Criterion {
+public class Verificator {
 
     public final int[] cards;
 
@@ -6,7 +6,7 @@ public class Criterion {
 
     private Comparison left_compare, right_compare;
 
-    public Criterion(int[] cards, char op, Comparison left_compare, Comparison right_compare) {
+    public Verificator(int[] cards, char op, Comparison left_compare, Comparison right_compare) {
         this.cards = cards;
         this.op = op;
         this.left_compare = left_compare;

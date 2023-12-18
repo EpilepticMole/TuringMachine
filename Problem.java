@@ -2,16 +2,16 @@ public class Problem {
     public final String type,mode,difficulty;
     public final int nb_verifications;
 
-    private Criterion[] criterions;
+    public final Verificator[] verificators;
 
     private int[] solution;
 
-    public Problem(String type, String mode, String difficulty, int nb_verifications, Criterion[] criterions, int[] solution) {
+    public Problem(String type, String mode, String difficulty, int nb_verifications, Verificator[] verificators, int[] solution) {
         this.type = type;
         this.mode = mode;
         this.difficulty = difficulty;
         this.nb_verifications = nb_verifications;
-        this.criterions = criterions;
+        this.verificators = verificators;
         this.solution = solution;
     }
 
@@ -28,33 +28,33 @@ public class Problem {
     public boolean verify(char verificator, int[] sequence) {
         switch(verificator) {
             case 'A':
-                if(criterions.length >= 1) {
-                    return criterions[0].verify(sequence);
+                if(verificators.length >= 1) {
+                    return verificators[0].verify(sequence);
                 }
                 break;
             case 'B':
-                if(criterions.length >= 2) {
-                    return criterions[1].verify(sequence);
+                if(verificators.length >= 2) {
+                    return verificators[1].verify(sequence);
                 }
                 break;
             case 'C':
-                if(criterions.length >= 3) {
-                    return criterions[2].verify(sequence);
+                if(verificators.length >= 3) {
+                    return verificators[2].verify(sequence);
                 }
                 break;
             case 'D':
-                if(criterions.length >= 4) {
-                    return criterions[3].verify(sequence);
+                if(verificators.length >= 4) {
+                    return verificators[3].verify(sequence);
                 }
                 break;
             case 'E':
-                if(criterions.length >= 5) {
-                    return criterions[4].verify(sequence);
+                if(verificators.length >= 5) {
+                    return verificators[4].verify(sequence);
                 }
                 break;
             case 'F':
-                if(criterions.length >= 6) {
-                    return criterions[5].verify(sequence);
+                if(verificators.length >= 6) {
+                    return verificators[5].verify(sequence);
                 }
                 break;
         }
