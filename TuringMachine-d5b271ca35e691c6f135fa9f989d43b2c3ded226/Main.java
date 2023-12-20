@@ -31,6 +31,6 @@ public class Main {
 
         ProblemDataBase.fillProblems(problems);
 
-        Problem problem = selectProblem("Solo", "Classique", "Standard", 5);
+        Problem problem = selectProblem("Solo", "Classique", "Standard", 6);
     }
 }

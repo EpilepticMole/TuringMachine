@@ -297,4 +297,3 @@ class GrowthComparison extends NumberComparison {
         return (int) verif / (sequence.length - 1);
     }
 }
-

@@ -1,11 +1,4 @@
 public class Problem {
-<<<<<<< HEAD
-    public String type,mode,difficulty;
-    public final int nb_verifications;
-    public final Verificator[] verificators;
-    private int[] solution;
-
-=======
     public final String type,mode,difficulty;
     public final int nb_verifications;
 
@@ -16,7 +9,6 @@ public class Problem {
     /**
      * Represents a problem with a specific type, mode, difficulty, verificators, and his solution.
      */
->>>>>>> d5b271ca35e691c6f135fa9f989d43b2c3ded226
     public Problem(String type, String mode, String difficulty, int nb_verifications, Verificator[] verificators, int[] solution) {
         this.type = type;
         this.mode = mode;
@@ -26,9 +18,6 @@ public class Problem {
         this.solution = solution;
     }
 
-<<<<<<< HEAD
-    public boolean check(int[] sequence) {  
-=======
     /**
      * Checks if the given sequence matches the solution of the problem.
      * 
@@ -36,7 +25,6 @@ public class Problem {
      * @return true if the sequence matches the solution, false otherwise
      */
     public boolean check(int[] sequence) {
->>>>>>> d5b271ca35e691c6f135fa9f989d43b2c3ded226
         if(sequence.length != solution.length) return false;
         
         boolean ret = true;
@@ -45,8 +33,6 @@ public class Problem {
         }
         return ret;
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Verifies the given sequence using the specified verificator.
@@ -55,7 +41,6 @@ public class Problem {
      * @param sequence the sequence to be verified
      * @return true if the sequence is verified successfully, false otherwise
      */
->>>>>>> d5b271ca35e691c6f135fa9f989d43b2c3ded226
     public boolean verify(char verificator, int[] sequence) {
         switch(verificator) {
             case 'A':
