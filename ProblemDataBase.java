@@ -861,6 +861,7 @@ public class ProblemDataBase {
 
         verificators = new Verificator[]{A, B, C, D, E, F};
         problems.add(new Problem("Solo", "Cauchemar", "Difficile", 6, verificators, new int[]{3,5,1}));
+<<<<<<< HEAD
     
         // Problème #A51 99K 3  5 vérificateurs
         // '△' >   1
@@ -966,5 +967,7 @@ public class ProblemDataBase {
         D = new Verificator(new int[]{25, 21}, '=', new ConsecutiveFinder(0), new NumberComparison(new int[]{2}));
         verificators = new Verificator[]{A, B, C, D};
         problems.add(new Problem("solo", "extrême", "difficile", 4, verificators, new int[]{3, 2, 1}));
+=======
+>>>>>>> d5b271ca35e691c6f135fa9f989d43b2c3ded226
     }
 }
