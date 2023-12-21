@@ -864,17 +864,20 @@ public class ProblemDataBase {
         
         // problème #E51 LRN L avec 5 vérificateurs
         A = new Verificator(new int[]{9, 8}, '=', new NumberComparison(new int[]{3}), new NumberComparison(new int[]{1}));
-        B = new Verificator(new int[]{12, 7}, '>', new ColorComparison(new char[]{'△'}), new ColorComparison(new char[]{'◯'}));
-        C = new Verificator(new int[]{1, 8}, '=', new NumberComparison(new int[]{1, 3, 5}), new NumberComparison(new int[]{1}));
-        D = new Verificator(new int[]{9, 8}, '=', new RepetitionFinder(), new NumberComparison(new int[]{1}));
-        E = new Verificator(new int[]{9, 8}, '>', new ColorComparison(new char[]{'☐'}), new NumberComparison(new int[]{3}));
+        B = new Verificator(new int[]{7, 12}, '>', new ColorComparison(new char[]{'△'}), new ColorComparison(new char[]{'◯'}));
+        // three odds values
+        C = new Verificator(new int[]{1, 3, 5}, '=', new NumberComparison(new int[]{1, 3, 5}), new NumberComparison(new int[]{3}));
+
+        C = new Verificator(new int[]{4, 17}, '=', new NumberComparison(new int[]{1, 3, 5}), new NumberComparison(new int[]{1}));
+        D = new Verificator(new int[]{20, 15}, '=', new RepetitionFinder(), new NumberComparison(new int[]{1}));
+        E = new Verificator(new int[]{3, 10}, '>', new ColorComparison(new char[]{'☐'}), new NumberComparison(new int[]{3}));
 
         verificators = new Verificator[]{A, B, C, D, E};
         problems.add(new Problem("Solo", "extrême", "facile", 5, verificators, new int[]{5, 5, 3}));
         
         // problème #C51 1IF 0 avec 5 vérificateurs
         A = new Verificator(new int[]{4}, '<', new ColorComparison(new char[]{'☐'}), new NumberComparison(new int[]{4}));
-        B = new Verificator(new int[]{24}, '=', new NumberComparison(new int[]{1}), new ConsecutiveFinder(1));
+        B = new Verificator(new int[]{24}, '=', new ConsecutiveFinder(1), new NumberComparison(new int[]{1}));
         C = new Verificator(new int[]{31}, '>', new ColorComparison(new char[]{'△'}), new NumberComparison(new int[]{1}));
         D = new Verificator(new int[]{34}, '≤', new ColorComparison(new char[]{'△'}), new ColorComparison(new char[]{'◯', '☐'}));
         E = new Verificator(new int[]{41}, '=', new ColorComparison(new char[]{'◯'}), new NumberComparison(new int[]{4}));
@@ -883,9 +886,9 @@ public class ProblemDataBase {
         problems.add(new Problem("Solo", "extrême", "difficile", 5, verificators, new int[]{2, 2, 4}));
 
         // problème #E4B 7EV avec 4 vérificateurs
-        A = new Verificator(new int[]{3, 14}, '=', new ColorComparison(new char[]{'☐'}), new ColorComparison(new char[]{'△', '◯'}));
+        A = new Verificator(new int[]{3, 14}, '<', new ColorComparison(new char[]{'☐'}), new ColorComparison(new char[]{'△', '◯'}));
         B = new Verificator(new int[]{6, 25}, '=', new ColorComparison(new char[]{'☐'}), new NumberComparison(new int[]{2, 4}));
-        C = new Verificator(new int[]{18,20}, '=', new NumberComparison(new int[]{0}), new RepetitionFinder());
+        C = new Verificator(new int[]{18,20}, '=',new RepetitionFinder(),  new NumberComparison(new int[]{0}));
         D = new Verificator(new int[]{22, 19}, '=', new ColorComparison(new char[]{'△', '☐'}), new NumberComparison(new int[]{6}));
         verificators = new Verificator[]{A, B, C, D};
         problems.add(new Problem("solo", "extrême", "facile", 4, verificators, new int[]{4, 2, 4}));
@@ -893,10 +896,10 @@ public class ProblemDataBase {
         // problème #F64 PDM U avec 6 vérificateurs
         A = new Verificator(new int[]{21, 36}, '=', new ColorComparison(new char[]{'△', '☐', '◯'}), new NumberComparison(new int[]{4, 8, 12, 16, 20}));
         B = new Verificator(new int[]{10, 26}, '=', new ColorComparison(new char[]{'△'}), new NumberComparison(new int[]{3}));    
-        C = new Verificator(new int[]{25, 13}, '=', new ConsecutiveFinder(2), new GrowthComparison());
+        C = new Verificator(new int[]{25, 13}, '=', new ConsecutiveFinder(0), new NumberComparison(new int[]{2}));
         D = new Verificator(new int[]{12, 11}, '>', new ColorComparison(new char[]{'☐'}), new ColorComparison(new char[]{'△'}));
-        E = new Verificator(new int[]{1, 33}, '=', new ColorComparison(new char[]{'☐'}), new NumberComparison(new int[]{2, 4}));
-        F = new Verificator(new int[]{8, 41}, '<', new ColorComparison(new char[]{'◯'}), new NumberComparison(new int[]{1, 3, 5}));
+        E = new Verificator(new int[]{1, 33}, '=', new ColorComparison(new char[]{'☐'}), new NumberComparison(new int[]{1, 3, 5}));
+        F = new Verificator(new int[]{8, 41}, '<', new ColorComparison(new char[]{'◯'}), new NumberComparison(new int[]{4}));
         verificators = new Verificator[]{A, B, C, D, E, F};
         problems.add(new Problem("solo", "extrême", "difficile", 6, verificators, new int[]{2, 3, 3}));
 
@@ -904,7 +907,7 @@ public class ProblemDataBase {
         A = new Verificator(new int[]{24, 41}, '=', new ColorComparison(new char[]{'☐'}), new NumberComparison(new int[]{4}));
         B = new Verificator(new int[]{2, 42}, '>', new ColorComparison(new char[]{'◯'}), new ColorComparison(new char[]{'△', '☐'}));
         C = new Verificator(new int[]{9, 5}, '=', new ColorComparison(new char[]{'△'}), new NumberComparison(new int[]{2, 4}));
-        D = new Verificator(new int[]{20, 4}, '=', new NumberComparison(new int[]{0}), new RepetitionFinder());
+        D = new Verificator(new int[]{20, 4}, '=', new RepetitionFinder(), new NumberComparison(new int[]{0}));
         verificators = new Verificator[]{A, B, C, D};
         problems.add(new Problem("solo", "extrême", "facile", 4, verificators, new int[]{2, 4, 5}));
 
@@ -913,8 +916,8 @@ public class ProblemDataBase {
         
         // Problème #B46 DCB  4 vérificateurs
         A = new Verificator(new int[]{1}, '>', new ColorComparison(new char[]{'△'}), new NumberComparison(new int[]{1}));
-        B = new Verificator(new int[]{18}, '=', new ColorComparison(new char[]{'◯', '△', '☐'}), new NumberComparison(new int[]{2, 4}));
-        C = new Verificator(new int[]{19}, '<', new ColorComparison(new char[]{'△', '☐'}), new NumberComparison(new int[]{1}));
+        B = new Verificator(new int[]{18}, '=', new ColorComparison(new char[]{'◯', '△', '☐'}), new NumberComparison(new int[]{2, 4, 6, 8, 10, 12, 14}));
+        C = new Verificator(new int[]{19}, '<', new ColorComparison(new char[]{'△', '☐'}), new NumberComparison(new int[]{6}));
         D = new Verificator(new int[]{22}, '>', new GrowthComparison(), new NumberComparison(new int[]{1}));
 
         verificators = new Verificator[]{A, B, C, D};
@@ -925,7 +928,7 @@ public class ProblemDataBase {
         B = new Verificator(new int[]{7}, '=', new ColorComparison(new char[]{'◯'}), new NumberComparison(new int[]{2, 4}));
         C = new Verificator(new int[]{8}, '=', new NumberComparison(new int[]{1}), new NumberComparison(new int[]{0}));
         D = new Verificator(new int[]{15}, '>', new ColorComparison(new char[]{'☐'}), new ColorComparison(new char[]{'△', '◯'}));
-        E = new Verificator(new int[]{18}, '>', new ColorComparison(new char[]{'△', '☐', '◯'}), new NumberComparison(new int[]{3, 4, 2}));
+        E = new Verificator(new int[]{18}, '=', new ColorComparison(new char[]{'△', '☐', '◯'}), new NumberComparison(new int[]{1, 3, 5, 7, 9, 11, 13, 15}));
 
         // Problème #F4D I8T  5 vérificateurs
         A = new Verificator(new int[]{19, 17}, '<', new ColorComparison(new char[]{'△', '☐'}), new NumberComparison(new int[]{6}));
