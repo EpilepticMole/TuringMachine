@@ -32,5 +32,14 @@ public class Main {
         ProblemDataBase.fillProblems(problems);
 
         Problem problem = selectProblem("Solo", "Classique", "Standard", 6);
+
+        Verificator[] verificators = problem.verificators;
+
+        for(Verificator v : verificators) {
+            int[] cards = v.cards;
+            System.out.println(cards); 
+        }
+
+        //problem.verify('A', new int[] {1,2,3});
     }
 }
